@@ -11,14 +11,28 @@ Laravel Lumen is a stunningly fast PHP micro-framework for building web applicat
 
 Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Contributing
+## Fibonacci REST API - Logic
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+This rest api was built on Lumen Framework, you can deploy it using the next command 
 
-## Security Vulnerabilities
+- "php -S localhost:8000 -t public"
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+The Fibonnaci API is in the next Path
 
-## License
+- "http://localhost:8000/fibbonacci_index"
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The PATH with the Fibonacci Controller
+
+- app/Http/Controllers/Fibbonacci.php
+
+## Logic - Steps by Steps
+
+The process was very simple, the first step was building a function called "fibbonacci" that implements the fibonnacci sequence and receives the index number to check, this one it is going to returns the correct fibbonacci number.
+
+The second step was implementing the function requested for the api, this function requires a "index" value that we're going to pass it with a json object[ This API can be tested with POSTMAN ], later a variable called "fibbonacci_index_number" is going to use the "fibbonacci" function to get the correct fibbonacci number (here we're going to pass the "index" value).
+
+The third step we're going to make a json response with the results with two values, index requested and fibbonacci number. 
+
+## Logic - Optimizations 
+
+I think it's implemented a solid process for this fibbonacci problem, but as we know a software is on a continuous improvement so a clear optimization for these functions is reducing the number of variables, that will going to make it a cleaner implementation
